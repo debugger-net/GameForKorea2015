@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		
+		<title>An Untitled Game</title>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="css/jquery-ui.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="prot.css" rel="stylesheet">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/createjs-2015.05.21.min.js"></script>
+		<script src="js/Button.js"></script>
+		
+		<div class="container">
+
+		<div>
+			<h1>An Untitled Game for South Korea, 2015</h1>
+			
+			<canvas id="gameCanvas" width="640" height="640"></canvas>
+			
+			<div>
+				<p>
+					by <a href="mailto:debugger0net@gmail.com">Debugger</a> in Seoul, Korea.
+				</p>
+				<p>
+					using 
+					<a href="http://www.createjs.com/">CREATE JS</a>, 
+					<a href="http://getbootstrap.com/">Bootstrap</a>, 
+					and <a href="https://jquery.com/">jQuery</a>. 
+				</p>
+				<p>
+					Photos and stories used in ending pages have it's own source links except a photo of the Gwanghwamun Gate, taken by myself.
+				</p>
+			</div>
+		</div>
+
+		</div><!-- /.container -->
+		
+		<!-- Ending: NT -->
+		<div class="modal fade" id="endingModalNT">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">불통</h4>
+					</div>
+					<div class="modal-body">
+						<div>
+							<p>
+								광장을 가득 메운 시민들. 그러나 과연, 어떤 변화를 이끌어 낼 수 있었던가?
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-default endingReplay"  data-dismiss="modal">
+							<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+							Replay
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Ending: CW -->
+		<div class="modal fade" id="endingModalCW">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Hacking to the Gwanghwamun Gate</h4>
+					</div>
+					<div class="modal-body">
+						<div>
+							<img src="img/ed_cw_1.jpg" class="img-responsive" alt="Gwanghwamun Gate">
+						</div>
+						<p>
+							청와대로는 가지 맙시다.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-default endingReplay"  data-dismiss="modal">
+							<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+							Replay
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Ending: Amb -->
+		<div class="modal fade" id="endingModalAmb">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Don't Shoot the Ambulance!</h4>
+					</div>
+					<div class="modal-body">
+						<div>
+							<img src="img/ed_amb_1.jpg" class="img-responsive" alt="출처: 민중의소리">
+						</div>
+						<p>
+							<a href="http://www.vop.co.kr/A00000958230.html">
+							기사보기 <small><span>(민중의소리)</span></small>
+							</a>
+						</p>
+						<p>
+							<a href="http://www.gobalnews.com/news/articleView.html?idxno=16609">
+							기사보기 <small><span>(고발뉴스)</span></small>
+							</a>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-default endingReplay"  data-dismiss="modal">
+							<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+							Replay
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Ending: Inj -->
+		<div class="modal fade" id="endingModalInj">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Direct Shooting</h4>
+					</div>
+					<div class="modal-body">
+						<blockquote class="twitter-video" lang="en"><p lang="ko" dir="ltr">속보, 충격, 경찰의 체류액 섞인 물대포 직사로 보성군 농민 백 씨의 생명이 위급하다고 담당의사가 통보 했다고 합니다. 현재 대학로 서울대병원 응급실에 계십니다. [7:58분] &#39;영상, 또 다른 농민&#39; <a href="https://t.co/9xPAquJXzh">pic.twitter.com/9xPAquJXzh</a></p>&mdash; 신비, 김상호 (@sinbi2010) <a href="https://twitter.com/sinbi2010/status/665493891412463616">November 14, 2015</a></blockquote>
+						<p>
+							<a href="https://www.youtube.com/watch?v=WHyDr8ZlRwg">
+							다른 영상보기 <small><span>(뉴스타파)</span></small>
+							</a>
+						</p>
+						<p>
+							<a href="http://www.nocutnews.co.kr/news/4504163">
+							기사보기 <small><span>(노컷뉴스)</span></small>
+							</a>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-default endingReplay"  data-dismiss="modal">
+							<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+							Replay
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- Ending: TK -->
+		<div class="modal fade" id="endingModalTK">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Team Kill</h4>
+					</div>
+					<div class="modal-body">
+						<h3>"아악! 나 같은 편이야! 병신 XX야!!"</h3>
+						<div>
+							<img src="img/ed_tk_1.jpg" class="img-responsive" alt="아악! 나 같은 편이야! 병신 XX야!!">
+						</div>
+						<p>
+							A police officer had been shot tear gas by another policeman said "Auch! I am in your side, you fucking idiot!!"
+						</p>
+						<p>
+							<a href="http://www.kimcoop.org/news/articleView.html?idxno=84699">
+							기사보기 <small><span>(한국 인터넷언론인 협동조합)</span></small>
+							</a>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<button type="button" class="btn btn-default endingReplay"  data-dismiss="modal">
+							<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+							Replay
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<script src="prot_grp_o.js"></script>
+		<script src="prot_grp_c.js"></script>
+		<script src="prot_grp_p.js"></script>
+		<script src="prot.js"></script>
+	</body>
+	
+</html>
