@@ -1,5 +1,9 @@
-@media (max-width: 767px) {
+@media only screen and (max-device-width:768px) {
   #content .modal.fade.in {
     top: 5%;
   }
+  body.modal-open {
+	overflow: hidden;
+	position: fixed;
+}
 }
